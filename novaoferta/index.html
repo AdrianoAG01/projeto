@@ -1,0 +1,838 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    
+      <script>
+!function(f,b,e,v,n,t,s){
+ if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+ if(!f._fbq)f._fbq=n;n.loaded=!0;n.version='2.0';
+ n.queue=[];t=b.createElement(e);t.async=!0;
+ t.src=v;s=b.getElementsByTagName(e)[0];
+ s.parentNode.insertBefore(t,s)}(window, document,'script',
+ 'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_AQUI'); // <-- seu Pixel ID aqui
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=SEU_PIXEL_AQUI&ev=PageView&noscript=1"/>
+</noscript> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta Exclusiva: Salgados Fit para o seu Desafio!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            /* Cores baseadas no produto e para harmonia */
+            --primary-orange: #e74c3c; /* Laranja/Vermelho forte */
+            --secondary-dark: #34495e; /* Azul escuro quase preto para texto */
+            --success-green: #2ecc71; /* Verde sucesso para CTA/Preço */
+            --background-light: #fdfdfd; 
+            --white-color: #ffffff;
+            --text-dark: #333;
+            --light-grey-bg: #fbeedb; /* Fundo mais claro e quente para seções */
+            --soft-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --hard-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, #e67e22, #c0392b); /* Gradiente de laranja para vermelho */
+            color: var(--white-color);
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            width: 100%;
+            background: url('images/salgados-fitness-congelados.webp') no-repeat center center/cover;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0,0,0,0.5); /* Escurece a imagem para o texto sobressair */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--white-color);
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #f1c40f; /* Amarelo para destaque no título principal */
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+        }
+
+        .subtitle {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--white-color);
+            margin-bottom: 30px;
+        }
+        
+        .congrats {
+            font-size: 1.15rem;
+            background-color: rgba(46, 125, 50, 0.9); /* Verde mais escuro com transparência */
+            color: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 6px solid var(--success-green);
+            margin-bottom: 40px;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .container {
+            max-width: 850px;
+            width: 100%;
+            margin: -60px auto 40px auto; /* Para sobrepor um pouco a seção hero */
+            padding: 30px;
+            text-align: center;
+            background-color: var(--white-color);
+            border-radius: 15px;
+            box-shadow: var(--hard-shadow);
+            position: relative;
+            z-index: 3;
+        }
+
+        .offer-headline {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-orange); /* Laranja para o título da oferta */
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .product-image {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 30px auto;
+            border-radius: 12px;
+            box-shadow: var(--soft-shadow);
+            border: 2px solid var(--light-grey-bg);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .benefits-list li {
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .benefits-list li::before {
+            content: '✅';
+            font-size: 1.7rem;
+            margin-right: 18px;
+            color: var(--success-green);
+            flex-shrink: 0;
+        }
+        
+        /* --- ESTILOS DO CARROSSEL DE DEPOIMENTOS --- */
+        .testimonial-section {
+            background-color: var(--light-grey-bg); /* Fundo quente e claro */
+            /* Imagem de fundo sutil: você pode trocar por uma textura de alimento ou deixar apenas a cor */
+            background-image: url('images/images-10.jpg'); 
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed; /* Efeito parallax */
+            padding: 50px 20px;
+            margin: 50px -50px; 
+            border-radius: 0 0 15px 15px; 
+            position: relative;
+        }
+        .testimonial-section::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.85); /* Overlay branco suave */
+        }
+
+        .testimonial-content-wrapper {
+            position: relative;
+            z-index: 1; 
+        }
+        .testimonial-section h2 {
+            font-size: 2rem;
+            color: var(--secondary-dark); /* Título dos depoimentos mais sóbrio */
+            margin-bottom: 35px;
+            font-weight: 700;
+            position: relative; 
+        }
+        .carousel-wrapper {
+            position: relative;
+            max-width: 760px; 
+            margin: 0 auto;
+        }
+        .carousel-viewport {
+            overflow: hidden;
+            width: 100%;
+            padding: 10px 0; 
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 25px;
+            padding: 0 10px; 
+        }
+        .testimonial-card {
+            background-color: var(--white-color);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--soft-shadow);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--light-grey-bg);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hard-shadow);
+        }
+        .testimonial-card .stars {
+            color: #ffc107; 
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        .testimonial-text {
+            font-size: 1rem;
+            flex-grow: 1;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 18px;
+            object-fit: cover;
+            border: 3px solid var(--success-green);
+        }
+        .author-info strong {
+            display: block;
+            color: var(--secondary-dark);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--success-green);
+            font-weight: 600;
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--secondary-dark);
+            box-shadow: var(--soft-shadow);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .carousel-nav:hover {
+            background-color: var(--primary-orange);
+            color: var(--white-color);
+            border-color: var(--primary-orange);
+        }
+        .carousel-nav.prev {
+            left: -30px;
+        }
+        .carousel-nav.next {
+            right: -30px;
+        }
+        
+        .price-section {
+            margin-bottom: 40px;
+        }
+
+        .original-price {
+            font-size: 1.3rem;
+            text-decoration: line-through;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+
+        .final-price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--success-green);
+            margin: 8px 0;
+            text-shadow: 1px 1px 5px rgba(39, 174, 96, 0.3);
+        }
+
+        .installments {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-dark);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #e67e22, #d35400); /* Laranja mais forte para o CTA */
+            color: var(--white-color);
+            padding: 22px 45px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.6);
+            background: linear-gradient(90deg, #d35400, #e67e22);
+        }
+
+        .cta-subtext {
+            display: block;
+            font-size: 0.95rem;
+            margin-top: 12px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); box-shadow: 0 8px 25px rgba(230, 126, 34, 0.5); }
+            100% { transform: scale(1); }
+        }
+
+        .no-thanks {
+            display: block;
+            margin-top: 30px;
+            color: #7f8c8d;
+            text-decoration: underline;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .no-thanks:hover {
+            color: var(--primary-orange);
+        }
+
+        .guarantee-box {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            padding: 25px;
+            background-color: var(--light-grey-bg);
+            border-radius: 12px;
+            border: 1px dashed #c0c0c0;
+        }
+
+        .guarantee-box img {
+            max-width: 90px;
+            flex-shrink: 0;
+        }
+        
+        .guarantee-text p {
+            text-align: left;
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+        .guarantee-text .title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--secondary-dark);
+            margin-bottom: 5px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            text-align: center;
+            width: 100%;
+            background-color: var(--light-grey-bg); /* Fundo do footer mais claro */
+            border-top: 1px solid #eee;
+        }
+
+        footer a {
+            color: #7f8c8d;
+            margin: 0 12px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        footer a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .timer-box {
+            background-color: var(--primary-orange); /* Laranja para o timer */
+            color: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 450px;
+            box-shadow: var(--soft-shadow);
+        }
+        .timer-box p {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        #countdown {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: #f1c40f; /* Amarelo para destaque no countdown */
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            .top-bar { font-size: 0.95rem; padding: 10px; }
+            .main-title { font-size: 2.5rem; }
+            .subtitle { font-size: 1.3rem; }
+            .congrats { font-size: 1rem; padding: 15px; }
+            .container { padding: 20px; margin-top: -40px; }
+            .offer-headline { font-size: 1.8rem; }
+            .product-image { max-width: 280px; }
+            .description { font-size: 1rem; }
+            .benefits-list li { font-size: 1.05rem; }
+            .benefits-list li::before { font-size: 1.4rem; margin-right: 12px; }
+
+            .testimonial-section { margin: 30px -20px; padding: 40px 15px; }
+            .testimonial-section h2 { font-size: 1.6rem; margin-bottom: 25px; }
+            .carousel-slide { grid-template-columns: 1fr; gap: 15px; padding: 0; }
+            .testimonial-card { padding: 20px; }
+            .testimonial-card .stars { font-size: 1.1rem; }
+            .testimonial-text { font-size: 0.9rem; margin-bottom: 15px; }
+            .testimonial-author img { width: 50px; height: 50px; margin-right: 12px; }
+            .author-info strong { font-size: 0.95rem; }
+            .author-info span { font-size: 0.8rem; }
+            .carousel-nav { width: 35px; height: 35px; font-size: 20px; top: 52%; }
+            .carousel-nav.prev { left: 0px; }
+            .carousel-nav.next { right: 0px; }
+
+            .final-price { font-size: 3rem; }
+            .installments { font-size: 1.1rem; }
+            .cta-button { font-size: 1.3rem; padding: 18px 35px; }
+            .cta-subtext { font-size: 0.85rem; }
+            .no-thanks { font-size: 0.95rem; margin-top: 25px; }
+            .guarantee-box { flex-direction: column; gap: 15px; padding: 20px; }
+            .guarantee-box img { max-width: 70px; }
+            .guarantee-text .title { font-size: 1.1rem; }
+            .timer-box { padding: 15px; max-width: 300px; }
+            .timer-box p { font-size: 1rem; }
+            #countdown { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .main-title { font-size: 2rem; }
+            .subtitle { font-size: 1.1rem; }
+            .hero-section { padding: 40px 15px; }
+            .container { padding: 15px; margin-top: -30px; }
+            .offer-headline { font-size: 1.6rem; }
+            .final-price { font-size: 2.5rem; }
+            .cta-button { font-size: 1.1rem; padding: 15px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        ATENÇÃO: Sua compra ainda NÃO foi finalizada! Esta é uma oferta ÚNICA e EXCLUSIVA para você!
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="main-title">ESPERE! SÓ MAIS UM PASSO...</h1>
+            <p class="subtitle">Seu acesso a receita moujaro de pobre, está confirmada.</p>
+            
+            <div class="congrats">
+                <strong>🎉 Parabéns pela sua decisão inteligente!</strong> Você acabou de dar o passo mais importante para transformar seu corpo e sua saúde.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="offer-headline">Agora junto com a receita, imagine Turbinar Seus Resultados Com Salgados DELICIOSOS Que NÃO Engordam!</h2>
+        
+        <p class="description">
+            Nós sabemos que um dos maiores desafios ao buscar um corpo mais saudável é resistir à vontade de comer aquele salgadinho. Mas e se você pudesse ter o melhor dos dois mundos?
+        </p>
+        <p class="description">
+            Pensando nisso, criamos uma oferta **única e exclusiva** para você que acaba de entrar no "Desafio 24 Dias Para Secar".
+        </p>
+        
+        <img src="images/M01-min.png" alt="E-book Salgados Fit" class="product-image">
+
+        <h3>Adicione ao seu pedido o E-book Exclusivo de "Salgados Fit: Delícias Saudáveis" e diga ADEUS à culpa!</h3>
+        
+        <ul class="benefits-list">
+            <li>Acabe com a vontade incontrolável de furar a dieta com receitas **saborosas e aprovadas** por nutricionistas.</li>
+            <li>**Receitas rápidas e práticas** que se encaixam perfeitamente na sua rotina corrida.</li>
+            <li>Utilize ingredientes **fáceis de encontrar e de baixo custo**, sem complicação.</li>
+            <li>Potencialize seu emagrecimento comendo o que você gosta, sem sacrificar o prazer!</li>
+            <li>Surpreenda sua família e amigos com opções saudáveis e incrivelmente deliciosas.</li>
+            <li>Diversidade de opções: coxinhas, pães de queijo, esfihas e muito mais, tudo na versão FIT!</li>
+        </ul>
+
+        <div class="testimonial-section">
+            <div class="testimonial-content-wrapper">
+                <h2>Quem já usa, AMA! Veja o que nossas alunas estão dizendo:</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"Nunca pensei que seria possível comer coxinha sem culpa! Esse e-book mudou minha vida e salvou minha dieta. As receitas são incríveis e super fáceis de fazer, mesmo para quem não cozinha muito."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=40" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Juliana Souza</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"Comprei o Salgados Fit e é o melhor investimento que fiz! O pão de queijo fit é surreal de bom, até meu marido que é super chato comeu e amou, sem perceber que era saudável. Super recomendo a todas!"</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=41" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Carla Mendes</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"Finalmente receitas de salgados que não pesam na consciência! Essencial para quem está focada no desafio e não quer passar vontade. Ajudou muito a manter o foco e a ter opções gostosas para o lanche."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=42" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Mariana Lima</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"Valeu cada centavo! As esfihas de frango são minhas preferidas. Fica muito mais fácil seguir o plano alimentar quando você tem essas opções deliciosas e saudáveis. Me sinto muito mais motivada."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=43" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Fernanda Costa</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"Indispensável! As receitas são super práticas e, o melhor de tudo, deliciosas. Ajudou muito a controlar a ansiedade por salgados no fim da tarde, que era meu ponto fraco na dieta."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=44" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Patrícia Alves</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"O melhor complemento para o Desafio 24 Dias! Não me sinto mais culpada quando quero um lanche diferente. Todas as receitas são um sucesso aqui em casa. Super aprovado por toda a família!"</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=45" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Aline Barros</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"As mini pizzas de berinjela são sensacionais! Nunca pensei que comer saudável poderia ser tão gostoso e variado. Esse e-book abriu meus olhos para novas possibilidades na cozinha fit. Adorei!"</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=46" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Renata Gomes</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <p class="testimonial-text">"Estou amando! Já fiz quase metade das receitas e uma é melhor que a outra. Tornou meu processo de emagrecimento muito mais prazeroso e sustentável. Agora consigo seguir sem sofrimento."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://i.pravatar.cc/100?img=47" alt="Foto da aluna">
+                                        <div class="author-info">
+                                            <strong>Beatriz Rocha</strong>
+                                            <span>Aluna Verificada ✅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav prev">n</button>
+                    <button class="carousel-nav next">o</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer-box">
+            <p>Aproveite esta oferta exclusiva! Restam apenas:</p>
+            <div id="countdown">10:00</div>
+        </div>
+        
+        <div class="price-section">
+            <p class="original-price">De R$ 67,00</p>
+            <p class="final-price">Por apenas R$ 14,90</p>
+            <p class="installments">Acesso Imediato e vitalício!</p>
+        </div>
+
+
+
+	<div style="width: auto; max-width: 400px;;">
+        <a href="javascript:void(0)" data-pepper="sgsjre6hks" class="pepper_btn">SIM, EU ACEITO ESSA OFERTA</a>
+        <a href="javascript:void(0)" data-downsell="https://emagrecasemdieta.site/dw" class="pepper_downsell">Vou recusar essa oferta</a>
+
+    </div>
+    <style>
+        .pepper_btn {
+            background: #3d94f6;
+            background-image: -webkit-linear-gradient(top, #3d94f6, #1e62d0);
+            background-image: -moz-linear-gradient(top, #3d94f6, #1e62d0);
+            background-image: -ms-linear-gradient(top, #3d94f6, #1e62d0);
+            background-image: -o-linear-gradient(top, #3d94f6, #1e62d0);
+            background-image: -webkit-gradient(to bottom, #3d94f6, #1e62d0);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            color: #fff;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: 100;
+            padding: 10px 20px;
+            border: 1px solid #337fed;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            text-align: center
+        }
+
+        .pepper_downsell {
+            color: #004faa;
+            font-family: Arial;
+            margin-top: 10px;
+            font-size: 16px!important;
+            font-weight: 100;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            text-align: center
+        }
+    </style>
+    <script src="js/oneclick.js"></script>
+	
+	
+
+
+        <div class="guarantee-box">
+            <img src="images/7-DIAS-PEITO.png.webp" alt="Selo de Garantia 7 Dias">
+            <div class="guarantee-text">
+                <p class="title">Sua Satisfação é 100% Garantida ou Seu Dinheiro de Volta!</p>
+                <p>Você tem 7 dias completos para experimentar todas as receitas. Se por qualquer motivo você não amar os Salgados Fit, basta pedir e devolvemos seu dinheiro. O risco é ZERO!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Copyright 2025 Todos os direitos reservados.</p>
+        <div>
+            <a href="#">Política de Privacidade</a> | 
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Contato</a>
+        </div>
+    </footer>
+
+    <script>
+        // LÓGICA DO CRONÔMETRO
+        function startTimer(duration, display) {
+            let timer = localStorage.getItem('upsellTimer') ? parseInt(localStorage.getItem('upsellTimer')) : duration;
+            const interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0;
+                    clearInterval(interval);
+                    document.querySelector('.timer-box').innerHTML = "<p>Esta oferta exclusiva expirou!</p>";
+                    // Opcional: desabilitar o botão de compra
+                    // document.querySelector('.cta-button').style.pointerEvents = 'none';
+                    // document.querySelector('.cta-button').style.opacity = '0.6';
+                }
+                localStorage.setItem('upsellTimer', timer);
+            }, 1000);
+        }
+
+        // LÓGICA DO CARROSSEL
+        function setupCarousel() {
+            const track = document.querySelector('.carousel-track');
+            if (!track) return; 
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.carousel-nav.next');
+            const prevButton = document.querySelector('.carousel-nav.prev');
+            
+            let currentIndex = 0;
+            
+            const getSlideWidth = () => {
+                const firstSlide = slides[0];
+                if (!firstSlide) return 0;
+                return firstSlide.getBoundingClientRect().width + 25; // Largura do slide + gap
+            };
+
+            const moveToSlide = (targetIndex) => {
+                const currentSlideWidth = getSlideWidth();
+                track.style.transform = 'translateX(-' + currentSlideWidth * targetIndex + 'px)';
+                currentIndex = targetIndex;
+            }
+            
+            const updateButtons = () => {
+                prevButton.style.display = currentIndex === 0 ? 'none' : 'flex';
+                nextButton.style.display = currentIndex === slides.length - 1 ? 'none' : 'flex';
+            }
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    moveToSlide(currentIndex + 1);
+                    updateButtons();
+                }
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    moveToSlide(currentIndex - 1);
+                    updateButtons();
+                }
+            });
+            
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const newSlideWidth = getSlideWidth();
+                    track.style.transition = 'none'; 
+                    track.style.transform = 'translateX(-' + newSlideWidth * currentIndex + 'px)';
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.6s ease-in-out'; 
+                    }, 50);
+                }, 200); 
+            });
+            
+            updateButtons();
+            moveToSlide(currentIndex);
+        }
+
+
+        window.onload = function () {
+            const tenMinutes = 60 * 10;
+            const display = document.querySelector('#countdown');
+            startTimer(tenMinutes, display);
+
+            setupCarousel();
+        };
+    </script>
+
+
+</body></html>
