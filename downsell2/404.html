@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Redirect to index.html with hash
+      var pathSegments = location.pathname.split('/').filter(function(segment) { return segment; });
+      var redirectPath = pathSegments.join('/');
+      location.replace('/downsell2/#/' + (redirectPath ? redirectPath : ''));
+    </script>
+  </head>
+  <body>
+    Redirecionando...
+  </body>
+</html>
